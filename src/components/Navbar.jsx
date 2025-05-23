@@ -1,5 +1,6 @@
 // src/components/Navbar.jsx
 import './Navbar.css';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = ({ activeSection, scrollToSection }) => {
   const sections = [
@@ -26,6 +27,7 @@ const Navbar = ({ activeSection, scrollToSection }) => {
           </li>
         ))}
       </ul>
+      <ThemeToggle/>
     </nav>
   );
 };

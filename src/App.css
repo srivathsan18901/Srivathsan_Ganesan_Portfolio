@@ -17,6 +17,7 @@ body {
 .navbar {
   background: #333;
   padding: 1rem;
+  display: flex;
 }
 
 .navbar ul {
@@ -164,7 +165,6 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-/* src/App.css */
 :root {
   --primary-color: #3498db;
   --secondary-color: #2c3e50;
@@ -263,7 +263,7 @@ main {
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
   position: relative;
   display: inline-block;
 }
@@ -279,9 +279,9 @@ main {
 }
 
 /* Alternate section backgrounds */
-.section:nth-child(even) {
+/* .section:nth-child(even) {
   background-color: var(--light-bg);
-}
+} */
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -297,4 +297,64 @@ main {
   .section-title {
     font-size: 2rem;
   }
+}
+/* Theme variables */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #4a6fa5;
+  --secondary-color: #f0f0f0;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --primary-color: #6d8cc0;
+  --secondary-color: #1e1e1e;
+  --card-bg: #1e1e1e;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Update existing styles to use variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+}
+
+section {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: auto;
+  color: var(--text-color);
+}
+/* Download button styles */
+.download-resume {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  margin: 1rem 0;
+}
+
+.download-resume:hover {
+  background-color: var(--primary-color-dark);
 }

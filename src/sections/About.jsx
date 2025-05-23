@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DownloadResume from '../components/DownloadResume';
 
 export default class About extends Component {
   render() {
@@ -11,6 +12,8 @@ export default class About extends Component {
               I'm a passionate developer with experience in building web applications.
               My journey in tech started when...
             </p>
+            <p>Detailed information about yourself...</p>
+            <DownloadResume />
             {/* Add more content */}
           </div>
         </div>
